@@ -36,10 +36,10 @@
 		<hr/>
 		<center><h1>Search Result</h1></center><br/>
 		<%
-			List<Product> cartItems = (List<Product>) session.getAttribute("searchResult");
-			if(cartItems.size() == 0)	{
+			List<Product> result = (List<Product>) session.getAttribute("searchResult");
+			if(result.size() == 0)	{
 		%>
-				<h3>Cart is empty</h3>
+				<h3>No result found</h3>
 			
 		<%	}
 			else {
@@ -54,7 +54,7 @@
 						<th><h3>Add to cart</h3></th>
 					</tr>
 		<%			
-					for(Product p : cartItems)	{
+					for(Product p : result)	{
 					
 						int productId = p.getProductId();
 						String productName = p.getName();
