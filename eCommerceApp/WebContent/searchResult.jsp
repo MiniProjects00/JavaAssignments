@@ -70,10 +70,9 @@
 						
 							if(productReviews != null)	{
 								int reviewStar = productReviews.get(0).getRating();
-								String reviewDescription = productReviews.get(0).getReviewDescription();
 		%>
 								<td><%=reviewStar%></td>
-								<td><%=reviewDescription%></td>
+								<td><a href="ExecuteRetrieveReviewServlet?productId=<%=productId%>" target="_parent"><button>View Reviews</button></a></td>
 		<%					}
 							else {
 		%>			
