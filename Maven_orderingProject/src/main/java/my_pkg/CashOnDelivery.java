@@ -9,7 +9,7 @@ public class CashOnDelivery implements Payment{
 	@Override
 	public int doPayment(int amount) {
 		
-		int deliveryFee= 5;
+		int deliveryFee = 5;
 		return (amount + deliveryFee);
 	}
 
